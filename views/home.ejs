@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Successfully logged in</h1>
+    <h4>Username:<%= newUser.username %></h4>
+    <form action="/user/delete" method="POST">
+        <input type="hidden" name="id" value=<%=newUser._id %>>
+        <button type="submit">Delete</button>
+    </form>
+    <form action="/user/logout" method="POST">
+        <button type="submit">Logout</button>
+    </form>
+</body>
+</html>
